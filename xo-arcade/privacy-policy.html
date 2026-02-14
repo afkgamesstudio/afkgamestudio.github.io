@@ -44,7 +44,7 @@
       border-radius: 6px;
       font-size: 0.9rem;
       color: var(--muted);
-      margin-bottom: 28px;
+      margin-bottom: 14px;
       border: 1px solid var(--border);
     }
     h2 {
@@ -66,12 +66,6 @@
     }
     p, li { margin-bottom: 14px; text-align: justify; }
     ul { padding-left: 20px; }
-    .info-box {
-      background: #f0f5ff;
-      border-left: 4px solid var(--primary-color);
-      padding: 18px 18px;
-      margin: 22px 0;
-    }
     a { color: var(--primary-color); text-decoration: none; font-weight: 700; }
     a:hover { text-decoration: underline; }
     footer {
@@ -93,24 +87,33 @@
       <a href="terms-of-service.html">Terms of Service</a>
       <span class="muted">•</span>
       <a href="privacy-policy.html">Privacy Policy</a>
+      <span class="muted">•</span>
+      <a href="third-party-notices.html">Third-Party Notices</a>
     </div>
 
     <div class="date-badge">
       Effective Date: February 13, 2026 &nbsp;•&nbsp; Last Updated: February 13, 2026
     </div>
 
+    <p class="muted" style="margin-top:0; margin-bottom:28px;">
+      Most current version (web):
+      <a href="https://afkgamesstudio.github.io/afkgamestudio.github.io/xo-arcade/privacy-policy.html">
+        https://afkgamesstudio.github.io/afkgamestudio.github.io/xo-arcade/privacy-policy.html
+      </a>
+    </p>
+
     <section id="scope">
       <h2>1. Scope; Entity; Roles</h2>
       <p>
-        This Privacy Policy describes how <strong>AFK GAMES STUDIO</strong> (“Studio,” “we,” “us,” or “our”) processes
-        information in connection with the mobile application <strong>XO Arcade: Infinity Edition</strong> (the “App”).
+        This Privacy Policy describes how <strong>AFK GAMES STUDIO</strong> (“Studio,” “we,” “us,” or “our”) processes information
+        in connection with the mobile application <strong>XO Arcade: Infinity Edition</strong> (the “App”).
       </p>
       <p>
         The App is designed as an <strong>offline-first</strong> experience. We do not require account registration,
         and we do not directly request or collect information such as legal names, physical addresses, or account credentials.
       </p>
       <p>
-        However, the App uses third-party SDKs (including <strong>Google AdMob</strong> and <strong>Google Play Services</strong>)
+        However, the App uses third-party SDKs (e.g., <strong>Google AdMob</strong> and <strong>Google Play Services</strong>)
         that may process identifiers and technical information (which may be considered “personal data” or “personal information”
         under certain laws) as described below.
       </p>
@@ -125,7 +128,7 @@
         <li><strong>Game State:</strong> progress, settings, and gameplay statistics.</li>
         <li>
           <strong>ZERO Protocol Data:</strong> gameplay telemetry used to adjust CPU difficulty and gameplay behavior locally.
-          This data is <strong>non-biometric</strong> and processed on-device.
+          This data is <strong>non-biometric</strong> and is processed on-device.
         </li>
       </ul>
 
@@ -145,7 +148,7 @@
       <ul>
         <li><strong>Advertising/Device Identifiers:</strong> Google Advertising ID (or equivalent identifiers), device identifiers, and app instance identifiers.</li>
         <li><strong>Network/Location Signals:</strong> IP address and approximate location inferred from IP.</li>
-        <li><strong>Device/Technical Data:</strong> device model, hardware/OS version, language, time zone, App version, diagnostics, and performance data.</li>
+        <li><strong>Device/Technical Data:</strong> device model, hardware/OS version, language, time zone, app version, diagnostics, and performance data.</li>
         <li><strong>Advertising Data:</strong> ad impressions, clicks, ad interaction events, and anti-fraud signals.</li>
       </ul>
       <p>
@@ -185,7 +188,7 @@
     </section>
 
     <section id="sharing">
-      <h2>6. Sharing; Third-Party Services; Open Source</h2>
+      <h2>6. Sharing; Third-Party Services</h2>
 
       <h3>6.1 Advertising and Platform Partners</h3>
       <p>The App may share information with or allow collection by:</p>
@@ -206,7 +209,7 @@
     <section id="choices-rights">
       <h2>7. Your Choices; Privacy Rights</h2>
 
-      <h3>7.1 Consent & Ads Preferences (UMP)</h3>
+      <h3>7.1 Consent &amp; Ads Preferences (UMP)</h3>
       <p>
         Where available, you can review or change ad consent choices using the in-app <strong>“Privacy Options”</strong> (or equivalent)
         which surfaces UMP choices.
@@ -229,7 +232,7 @@
       <h3>7.4 EEA/UK and Other Regions</h3>
       <p>
         Subject to applicable law, you may have rights to access, delete, or object to certain processing. To submit a request, contact us as described
-        in Section 12. Please note that we may be unable to access or delete information held by third parties directly; in those cases, you must use
+        in Section 13. Please note that we may be unable to access or delete information held by third parties directly; in those cases, you must use
         the controls provided by the third party or your device settings.
       </p>
     </section>
@@ -237,7 +240,7 @@
     <section id="retention">
       <h2>8. Data Retention</h2>
       <ul>
-        <li><strong>Local Game Data</strong> is retained on your device until you delete it using in-game controls or uninstall the App (subject to OS backups).</li>
+        <li><strong>Local Game Data</strong> is retained on your device until you delete it using in-app controls or uninstall the App (subject to OS backups).</li>
         <li><strong>Third-party data retention</strong> is governed by the third parties’ own policies and settings.</li>
       </ul>
     </section>
@@ -265,11 +268,32 @@
       </p>
     </section>
 
-    <section id="disputes">
-      <h2>12. Disputes</h2>
+    <section id="data-deletion">
+      <h2>12. Data Deletion (How to Delete Data)</h2>
+
+      <h3>12.1 Local (On-Device) Deletion</h3>
       <p>
-        Disputes related to the App, including privacy-related disputes, are governed by the App’s <a href="terms-of-service.html">Terms of Service</a>,
-        to the maximum extent permitted by applicable law. Mandatory consumer protection rights remain unaffected.
+        Because the App is offline-first, most App data is stored locally on your device. You can delete local game data by:
+      </p>
+      <ul>
+        <li>Using in-app controls such as <strong>“Wipe Memory”</strong> and/or <strong>“Reset Stats”</strong>; and/or</li>
+        <li>Uninstalling the App (subject to your device/OS backup settings).</li>
+      </ul>
+
+      <h3>12.2 Third-Party Data</h3>
+      <p>
+        Some information may be processed by third-party SDKs (e.g., Google AdMob / Google Play Services). The Studio may not be able to directly access,
+        delete, or control data held by third parties. Where available, use:
+      </p>
+      <ul>
+        <li>The App’s <strong>“Privacy Options”</strong> (Google UMP) to manage advertising consent/choices; and/or</li>
+        <li>Your device settings (e.g., reset/delete Advertising ID or limit ad personalization); and/or</li>
+        <li>The third party’s own controls and policies.</li>
+      </ul>
+
+      <h3>12.3 Requests</h3>
+      <p>
+        If you have a privacy or deletion request that applies to Studio-controlled processing, contact us using the details in Section 13.
       </p>
     </section>
 
@@ -280,15 +304,6 @@
         Email: <a href="mailto:afkstudios.dev@gmail.com">afkstudios.dev@gmail.com</a>
       </p>
     </section>
-
-    <div class="info-box" id="ai-disclosure">
-      <h2>AI Assets Disclosure</h2>
-      <p>
-        The App may incorporate audio and/or voice assets generated using artificial intelligence tools, including but not limited to
-        <strong>Suno AI</strong> and <strong>ElevenLabs</strong>. These assets are utilized under valid commercial licenses held by AFK GAMES STUDIO.
-        These technologies do not collect user telemetry through the App interface.
-      </p>
-    </div>
 
     <footer>
       &copy; 2026 AFK GAMES STUDIO. All rights reserved.

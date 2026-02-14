@@ -68,7 +68,13 @@
     }
 
     .header-content { display: flex; align-items: center; gap: 20px; }
-    .logo { height: 60px; filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5)); }
+    
+    /* Logo adjustment */
+    .logo { 
+      height: 50px; 
+      width: auto;
+      filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4)); 
+    }
 
     .brand-text h1 {
       font-size: 1.6rem;
@@ -88,13 +94,13 @@
     main { padding: 60px 0 100px; }
 
     .section-header { margin-bottom: 40px; text-align: center; }
-    .section-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; }
+    .section-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; color: #fff; }
     .subnote { color: var(--text-light); max-width: 700px; margin: 0 auto; }
 
     /* ---------- Grid & Cards ---------- */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 30px;
     }
 
@@ -106,20 +112,22 @@
       transition: all var(--dur) var(--ease);
       display: flex;
       flex-direction: column;
+      position: relative;
     }
 
     .card:hover {
       transform: translateY(-8px);
-      border-color: var(--primary);
+      border-color: rgba(59, 130, 246, 0.5);
       box-shadow: var(--shadow-lg);
     }
 
     /* Image Container (Banner Style) */
     .card-image {
       width: 100%;
-      height: 220px;
+      height: 200px;
       overflow: hidden;
       position: relative;
+      border-bottom: 1px solid var(--border);
     }
 
     .card-image img {
@@ -131,39 +139,42 @@
 
     .card:hover .card-image img { transform: scale(1.05); }
 
-    .card-content { padding: 30px; flex-grow: 1; }
-    .card h2 { margin: 0 0 12px 0; font-size: 1.4rem; color: #fff; }
-    .card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 25px; }
+    .card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+    .card h2 { margin: 0 0 10px 0; font-size: 1.3rem; color: #fff; font-weight: 700; }
+    .card p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 25px; flex-grow: 1; }
 
     /* Legal Links Layout */
     .legal-links {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: auto;
     }
 
     .legal-links a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       text-decoration: none;
-      color: #fff;
+      color: #e2e8f0;
       font-size: 0.85rem;
       font-weight: 600;
-      background: rgba(255, 255, 255, 0.05);
-      padding: 12px;
-      border-radius: 10px;
-      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 12px 16px;
+      border-radius: 8px;
       transition: background var(--dur), transform var(--dur);
-      border: 1px solid transparent;
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .legal-links a:hover {
-      background: rgba(59, 130, 246, 0.2);
-      border-color: var(--primary);
-      transform: translateY(-2px);
+      background: rgba(59, 130, 246, 0.15);
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateX(4px);
+      color: #fff;
     }
-
-    .legal-links .full-width { grid-column: span 2; }
+    
+    .legal-links a::after { content: "→"; opacity: 0.5; transition: opacity 0.2s; }
+    .legal-links a:hover::after { opacity: 1; }
 
     /* ---------- Footer ---------- */
     footer {
@@ -171,15 +182,27 @@
       padding: 60px 0;
       text-align: center;
       border-top: 1px solid var(--border);
+      margin-top: auto;
     }
 
-    .jurisdiction { color: var(--primary); font-weight: 800; font-size: 0.8rem; letter-spacing: 0.1em; margin-bottom: 10px; }
-    footer p { color: var(--text-light); font-size: 0.9rem; }
-    footer a { color: var(--primary); text-decoration: none; font-weight: 700; }
+    .jurisdiction { 
+      color: var(--primary); 
+      font-weight: 800; 
+      font-size: 0.75rem; 
+      letter-spacing: 0.15em; 
+      text-transform: uppercase;
+      margin-bottom: 12px; 
+      opacity: 0.9;
+    }
+    
+    footer p { color: var(--text-light); font-size: 0.9rem; margin: 5px 0; }
+    footer a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: #fff; }
 
     @media (max-width: 640px) {
       .grid { grid-template-columns: 1fr; }
       .card-image { height: 180px; }
+      .header-content { flex-direction: column; text-align: center; gap: 10px; }
     }
   </style>
 </head>
@@ -188,7 +211,7 @@
 
   <header>
     <div class="container header-content">
-      <img src="assets/afk-logo.png" alt="Logo" class="logo">
+      <img src="assets/afk-logo.png" alt="AFK GAMES STUDIO" class="logo">
       <div class="brand-text">
         <h1>AFK GAMES STUDIO</h1>
         <div class="tagline">Enterprise Compliance Portal</div>
@@ -199,58 +222,58 @@
   <main class="container">
     <div class="section-header">
       <h2 class="section-title">Global Portfolio</h2>
-      <p class="subnote">Official legal repository for AFK GAMES STUDIO software and tactical systems.</p>
+      <p class="subnote">Official legal repository for AFK GAMES STUDIO software and tactical systems. Centralized access to privacy policies, terms of service, and third-party attributions.</p>
     </div>
 
     <div class="grid">
       <div class="card">
-        <div class="card-image"><img src="assets/qr-decoder-banner.jpg" alt="QR Decoder Banner"></div>
+        <div class="card-image"><img src="assets/qr-decoder-banner.png" alt="QR Decoder Banner"></div>
         <div class="card-content">
           <h2>QR Decoder & Scanner</h2>
-          <p>Enterprise-grade scanning utility featuring advanced OCR and secure document processing.</p>
+          <p>Enterprise-grade scanning utility featuring advanced OCR, secure document processing, and local encryption protocols.</p>
           <div class="legal-links">
             <a href="qr-decoder/privacy-policy.html">Privacy Policy</a>
             <a href="qr-decoder/terms-of-use.html">Terms of Use</a>
-            <a href="qr-decoder/third-party-notices.html" class="full-width">Third-Party Notices</a>
+            <a href="qr-decoder/third-party-notices.html">Third-Party Notices</a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-image"><img src="assets/xo-arcade-banner.jpg" alt="XO Arcade Banner"></div>
+        <div class="card-image"><img src="assets/xo-arcade-banner.png" alt="XO Arcade Banner"></div>
         <div class="card-content">
           <h2>XO Arcade: Infinity Edition</h2>
-          <p>Strategic grid combat featuring the proprietary offline ZERO Protocol AI system.</p>
+          <p>Strategic grid combat system featuring the proprietary offline ZERO Protocol AI engine.</p>
           <div class="legal-links">
             <a href="xo-arcade/privacy-policy.html">Privacy Policy</a>
             <a href="xo-arcade/terms-of-use.html">Terms of Use</a>
-            <a href="xo-arcade/third-party-notices.html" class="full-width">Third-Party Notices</a>
+            <a href="xo-arcade/third-party-notices.html">Third-Party Notices</a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-image"><img src="assets/air-strike-banner.jpg" alt="Air Strike Banner"></div>
+        <div class="card-image"><img src="assets/air-strike-banner.png" alt="Air Strike Arcade Banner"></div>
         <div class="card-content">
           <h2>Air Strike Arcade</h2>
-          <p>High-intensity tactical air combat utilizing local AI-driven tactical patterns.</p>
+          <p>High-intensity tactical air combat utilizing local machine-learning patterns and offline-first architecture.</p>
           <div class="legal-links">
             <a href="air-strike-arcade/privacy-policy.html">Privacy Policy</a>
             <a href="air-strike-arcade/terms-of-use.html">Terms of Use</a>
-            <a href="air-strike-arcade/third-party-notices.html" class="full-width">Third-Party Notices</a>
+            <a href="air-strike-arcade/third-party-notices.html">Third-Party Notices</a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-image"><img src="assets/tap-odyssey-banner.jpg" alt="Tap Odyssey Banner"></div>
+        <div class="card-image"><img src="assets/tap-odyssey-banner.png" alt="Tap Odyssey Banner"></div>
         <div class="card-content">
           <h2>Tap Odyssey</h2>
-          <p>Rhythmic arcade experience with skin customization and world exploration logic.</p>
+          <p>Rhythmic arcade experience with skin customization, world exploration logic, and strict data minimization.</p>
           <div class="legal-links">
             <a href="tap-odyssey/privacy-policy.html">Privacy Policy</a>
             <a href="tap-odyssey/terms-of-use.html">Terms of Use</a>
-            <a href="tap-odyssey/third-party-notices.html" class="full-width">Third-Party Notices</a>
+            <a href="tap-odyssey/third-party-notices.html">Third-Party Notices</a>
           </div>
         </div>
       </div>

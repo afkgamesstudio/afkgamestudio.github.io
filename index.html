@@ -4,84 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AFK GAMES STUDIO | Official Corporate Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary: #2b6cb0;
-            --primary-dark: #2c5282;
+            --primary: #2b6cb0; /* Azul Corporativo */
+            --primary-dark: #1a365d;
             --accent: #4299e1;
-            --text-main: #2d3748;
+            --text-main: #1a202c;
             --text-light: #718096;
-            --bg-gray: #f7fafc;
+            --bg-body: #f8fafc;
+            --bg-surface: #ffffff;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             color: var(--text-main);
-            background-color: var(--bg-gray);
+            background-color: var(--bg-body);
             margin: 0;
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-        /* Header Section */
+        /* --- Header Enterprise --- */
         header {
-            background: white;
-            padding: 60px 0;
-            text-align: center;
+            background: var(--bg-surface);
+            padding: 40px 0;
             border-bottom: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--shadow-sm);
         }
 
-        h1 {
-            font-size: 2.5rem;
-            color: var(--primary);
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo {
+            height: 64px; /* Ajusta esto según tu logo */
+            width: auto;
+            /* Si tu logo es azul oscuro, se verá bien. Si es blanco, necesitarás un fondo oscuro */
+        }
+
+        .brand-text h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-dark);
             margin: 0;
-            letter-spacing: -0.05em;
+            letter-spacing: -0.025em;
             text-transform: uppercase;
         }
 
         .tagline {
             color: var(--text-light);
-            font-size: 1.1rem;
-            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 4px;
         }
 
-        /* App Grid */
+        /* --- Main Content --- */
+        main { padding: 60px 0; }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 32px;
+            border-left: 4px solid var(--primary);
+            padding-left: 16px;
+        }
+
+        /* App Grid Premium --- */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 50px 0;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
         }
 
         .card {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.2s, box-shadow 0.2s;
+            background: var(--bg-surface);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid #edf2f7;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
         }
 
         .card h2 {
             margin-top: 0;
+            font-size: 1.35rem;
             color: var(--primary-dark);
-            border-bottom: 2px solid var(--bg-gray);
-            padding-bottom: 10px;
+            font-weight: 700;
+            margin-bottom: 12px;
         }
 
+        .card p {
+            color: var(--text-light);
+            margin-bottom: 24px;
+            flex-grow: 1; /* Empuja los enlaces hacia abajo */
+        }
+
+        /* Links Profesionales --- */
         .legal-links {
             list-style: none;
             padding: 0;
-            margin: 20px 0 0 0;
+            margin: 0;
+            border-top: 1px solid #edf2f7;
+            padding-top: 20px;
         }
 
-        .legal-links li { margin-bottom: 12px; }
+        .legal-links li { margin-bottom: 10px; }
 
         .legal-links a {
             text-decoration: none;
@@ -90,59 +137,74 @@
             font-size: 0.95rem;
             display: flex;
             align-items: center;
+            padding: 8px 12px;
+            border-radius: 6px;
+            background-color: #f0f7ff;
+            transition: background-color 0.2s;
         }
 
-        .legal-links a:hover { color: var(--accent); }
+        .legal-links a:hover {
+            background-color: #e1effe;
+            color: var(--primary-dark);
+        }
 
         .legal-links a::before {
-            content: "→";
-            margin-right: 8px;
-            font-weight: bold;
+            content: "📄";
+            margin-right: 12px;
+            font-size: 1.1rem;
+            filter: grayscale(100%);
+            opacity: 0.8;
         }
 
-        /* Compliance Section */
-        .compliance-banner {
-            background: #ebf8ff;
-            border-left: 5px solid var(--primary);
-            padding: 25px;
-            margin: 40px 0;
-            font-size: 0.95rem;
-        }
-
+        /* --- Footer Corporativo --- */
         footer {
+            background: var(--primary-dark);
+            color: #cbd5e0;
+            padding: 48px 0;
             text-align: center;
-            padding: 60px 0;
-            color: var(--text-light);
             font-size: 0.9rem;
-            border-top: 1px solid #e2e8f0;
         }
 
         .jurisdiction {
-            color: var(--text-main);
-            font-weight: bold;
-            margin-bottom: 5px;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-links a { color: #90cdf4; text-decoration: none; }
+        
+        /* Responsivo para móviles */
+        @media (max-width: 640px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo { height: 50px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <h1>AFK GAMES STUDIO</h1>
-            <div class="tagline">Official Corporate Legal & Information Repository</div>
+        <div class="container header-content">
+            <img src="assets/afk-logo.png" alt="AFK GAMES STUDIO Logo" class="logo">
+            <div class="brand-text">
+                <h1>AFK GAMES STUDIO</h1>
+                <div class="tagline">Official Corporate Portal & Legal Repository</div>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        
-        <div class="compliance-banner">
-            <strong>Corporate Data Protocol:</strong> All applications under the AFK GAMES STUDIO banner operate under a strict <strong>Data Minimization Protocol</strong> and comply with global standards, including GDPR, CCPA, and COPPA.
-        </div>
+        <div class="section-title">Active Portfolio & Legal Frameworks</div>
 
         <div class="grid">
             <div class="card">
                 <h2>Tap Odyssey</h2>
-                <p>High-performance rhythmic arcade experience.</p>
+                <p>High-performance rhythmic arcade experience operating under strict data minimization protocols.</p>
                 <ul class="legal-links">
                     <li><a href="tap-odyssey/privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="tap-odyssey/terms-of-use.html">Terms of Service</a></li>
@@ -152,7 +214,7 @@
 
             <div class="card">
                 <h2>XO Arcade: Infinity Edition</h2>
-                <p>Advanced Tic-Tac-Toe featuring the ZERO Protocol AI engine.</p>
+                <p>Advanced logic engine featuring the proprietary offline ZERO Protocol AI system.</p>
                 <ul class="legal-links">
                     <li><a href="xo-arcade/privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="xo-arcade/terms-of-use.html">Terms of Service</a></li>
@@ -160,14 +222,13 @@
                 </ul>
             </div>
         </div>
-
     </main>
 
     <footer>
         <div class="container">
-            <p class="jurisdiction">Statutory Jurisdiction: Orange County, Florida, USA</p>
-            <p>&copy; 2026 AFK GAMES STUDIO. All rights reserved.</p>
-            <p>Compliance Contact: afkstudios.dev@gmail.com</p>
+            <div class="jurisdiction">Statutory Jurisdiction: Orange County, Florida, USA</div>
+            <p>&copy; 2026 AFK GAMES STUDIO. All rights reserved. | Enterprise Compliance Division</p>
+            <p>Contact: <a href="mailto:afkstudios.dev@gmail.com" style="color: #90cdf4;">afkstudios.dev@gmail.com</a></p>
         </div>
     </footer>
 

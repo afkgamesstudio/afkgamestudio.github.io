@@ -5,167 +5,188 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Google AdMob Notice - Tap Odyssey | AFK GAMES STUDIO</title>
   <style>
-    :root {
-      --primary-color: #2b6cb0;
-      --text-color: #1a202c;
-      --bg-color: #ffffff;
-      --box-bg: #f7fafc;
-      --border: #e2e8f0;
-      --muted: #718096;
+    :root{
+      --primary:#0f172a;
+      --text:#111827;
+      --muted:#4b5563;
+      --bg:#ffffff;
+      --surface:#f9fafb;
+      --border:#e5e7eb;
+      --highlight:#eff6ff;
+      --link:#2563eb;
     }
-    body {
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.7;
-      color: var(--text-color);
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      background: var(--bg-color);
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height:1.65;
     }
-    .legal-wrapper { border-top: 6px solid var(--primary-color); padding-top: 30px; }
-    h1 {
-      font-size: 2rem;
-      color: var(--text-color);
-      text-transform: uppercase;
-      letter-spacing: -0.02em;
-      margin-bottom: 6px;
+    .wrap{ max-width:900px; margin:0 auto; padding:60px 22px 80px; }
+    .header{
+      border-bottom:4px solid var(--primary);
+      padding-bottom:20px;
+      margin-bottom:26px;
+      text-align:center;
     }
-    .top-links {
-      margin: 8px 0 18px;
-      font-size: 0.95rem;
-      color: var(--muted);
+    h1{
+      margin:0 0 8px;
+      font-size:2rem;
+      letter-spacing:-0.02em;
+      text-transform:uppercase;
+      color:var(--primary);
+      font-weight:900;
     }
-    .top-links a { color: var(--primary-color); text-decoration: none; font-weight: 700; }
-    .top-links a:hover { text-decoration: underline; }
-    .date-badge {
-      display: inline-block;
-      background: var(--box-bg);
-      padding: 6px 14px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 14px;
-      border: 1px solid var(--border);
+    .meta{
+      color:var(--muted);
+      font-size:.9rem;
+      text-transform:uppercase;
+      font-weight:700;
+      letter-spacing:.06em;
     }
-    h2 {
-      font-size: 1.1rem;
-      color: var(--primary-color);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 8px;
-      margin-top: 40px;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
+    .card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:20px;
     }
-    p, li { margin-bottom: 14px; text-align: justify; }
-    ul { padding-left: 20px; }
-    a { color: var(--primary-color); text-decoration: none; font-weight: 700; }
-    a:hover { text-decoration: underline; }
-    footer {
-      margin-top: 60px;
-      padding-top: 20px;
-      border-top: 2px solid #edf2f7;
-      font-size: 0.9rem;
-      color: #4a5568;
+    .notice{
+      border:2px solid var(--primary);
+      background:var(--highlight);
+      border-radius:12px;
+      padding:18px;
+      margin-top:18px;
     }
-    .muted { color: var(--muted); }
+    h2{
+      margin:0 0 12px;
+      font-size:1.05rem;
+      color:var(--primary);
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      border-bottom:1px solid var(--border);
+      padding-bottom:10px;
+      font-weight:800;
+    }
+    p{ margin:0 0 14px; color:var(--muted); text-align:justify; }
+    ul{ margin:0 0 14px; padding-left:18px; color:var(--muted); }
+    li{ margin:6px 0; }
+    a{ color:var(--link); font-weight:700; text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    footer{
+      margin-top:36px;
+      padding-top:18px;
+      border-top:1px solid var(--border);
+      text-align:center;
+      font-size:.9rem;
+      color:var(--muted);
+    }
+    .label{
+      display:block;
+      margin-top:14px;
+      font-weight:800;
+      color:var(--text);
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      font-size:.85rem;
+    }
   </style>
 </head>
-
 <body>
-  <div class="legal-wrapper">
-    <h1>Google AdMob Notice</h1>
-
-    <div class="top-links">
-      <a href="terms-of-service.html">Terms of Service</a>
-      <span class="muted">•</span>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <span class="muted">•</span>
-      <a href="third-party-notices.html">Third-Party Notices</a>
+  <div class="wrap">
+    <div class="header">
+      <h1>Google AdMob Notice</h1>
+      <div class="meta">Tap Odyssey | AFK GAMES STUDIO</div>
     </div>
 
-    <div class="date-badge">
-      Last Updated: February 13, 2026
+    <div class="card">
+      <p>
+        This notice applies to <strong>Tap Odyssey</strong> (the “App”), developed by
+        <strong>AFK GAMES STUDIO</strong> (“Studio”).
+      </p>
+
+      <div class="notice">
+        <h2>Google AdMob — Third-Party Service Notice</h2>
+
+        <p>
+          The App uses Google AdMob (Google Mobile Ads SDK) provided by Google LLC to display advertising.
+        </p>
+
+        <span class="label">Data Handling</span>
+        <p>
+          Google AdMob and related Google services may collect or receive certain information for ad delivery, measurement,
+          frequency capping, and fraud prevention. Depending on configuration, region, and user choices, this may include:
+        </p>
+        <ul>
+          <li>Advertising/device identifiers (e.g., Advertising ID or equivalent)</li>
+          <li>IP address and approximate location inferred from IP</li>
+          <li>Device/technical information (device model, OS/app version, diagnostics/performance)</li>
+          <li>Advertising events (impressions, clicks, interaction signals) and anti-fraud signals</li>
+        </ul>
+
+        <p>
+          Google processes such information under its own terms and privacy policies and, in some cases, as an independent controller.
+          The App’s data disclosures and user choices are described in the App’s Privacy Policy.
+        </p>
+
+        <span class="label">User Choices / Consent</span>
+        <p>
+          Where available, you can manage advertising consent and choices via the App’s “Privacy Options” (Google UMP) and/or your device
+          settings (e.g., search “Ads” in system settings to reset/delete Advertising ID or limit ad personalization).
+        </p>
+
+        <span class="label">References (Google)</span>
+        <ul>
+          <li>
+            Mobile Ads SDK disclosure guidance (Google Play requirements):
+            <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener noreferrer">
+              https://developers.google.com/admob/android/privacy/play-data-disclosure
+            </a>
+          </li>
+          <li>
+            Google Play “Data safety” disclosure guidance (Play Console requirements):
+            <a href="https://support.google.com/googleplay/android-developer/answer/10787469" target="_blank" rel="noopener noreferrer">
+              https://support.google.com/googleplay/android-developer/answer/10787469
+            </a>
+          </li>
+        </ul>
+
+        <span class="label">Terms &amp; Policies</span>
+        <p>
+          Use of Google AdMob / Google Mobile Ads SDK is governed by Google’s applicable terms and policies, including:
+        </p>
+        <ul>
+          <li>
+            AdMob Terms of Service:
+            <a href="https://developers.google.com/admob/terms" target="_blank" rel="noopener noreferrer">
+              https://developers.google.com/admob/terms
+            </a>
+          </li>
+          <li>
+            Google Mobile Ads SDK Terms of Service:
+            <a href="https://developers.google.com/ad-manager/mobile-ads-sdk/terms" target="_blank" rel="noopener noreferrer">
+              https://developers.google.com/ad-manager/mobile-ads-sdk/terms
+            </a>
+          </li>
+          <li>
+            Google Privacy Policy:
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+              https://policies.google.com/privacy
+            </a>
+          </li>
+        </ul>
+
+        <span class="label">Note</span>
+        <p>
+          Note: Links and policy names may change over time; refer to Google’s official documentation for the most current versions.
+        </p>
+      </div>
+
+      <footer>
+        <div><strong>AFK GAMES STUDIO</strong></div>
+        <div>Contact: <a href="mailto:afkstudios.dev@gmail.com">afkstudios.dev@gmail.com</a></div>
+      </footer>
     </div>
-
-    <section id="notice">
-      <h2>GOOGLE ADMOB — THIRD-PARTY SERVICE NOTICE</h2>
-
-      <p>
-        The App uses Google AdMob (Google Mobile Ads SDK) provided by Google LLC to display advertising.
-      </p>
-
-      <h2>Data Handling</h2>
-      <p>
-        Google AdMob and related Google services may collect or receive certain information for ad delivery, measurement,
-        frequency capping, and fraud prevention. Depending on configuration, region, and user choices, this may include:
-      </p>
-      <ul>
-        <li>Advertising/device identifiers (e.g., Advertising ID or equivalent)</li>
-        <li>IP address and approximate location inferred from IP</li>
-        <li>Device/technical information (device model, OS/app version, diagnostics/performance)</li>
-        <li>Advertising events (impressions, clicks, interaction signals) and anti-fraud signals</li>
-      </ul>
-      <p>
-        Google processes such information under its own terms and privacy policies and, in some cases, as an independent controller.
-        The App’s data disclosures and user choices are described in the App’s Privacy Policy.
-      </p>
-
-      <h2>User Choices / Consent</h2>
-      <p>
-        Where available, you can manage advertising consent and choices via the App’s “Privacy Options” (Google UMP) and/or your device
-        settings (e.g., search “Ads” in system settings to reset/delete Advertising ID or limit ad personalization).
-      </p>
-
-      <h2>References (Google)</h2>
-      <ul>
-        <li>
-          Mobile Ads SDK disclosure guidance (Google Play requirements):<br />
-          <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener noreferrer">
-            https://developers.google.com/admob/android/privacy/play-data-disclosure
-          </a>
-        </li>
-        <li>
-          Google Play “Data safety” disclosure guidance (Play Console requirements):<br />
-          <a href="https://support.google.com/googleplay/android-developer/answer/10787469" target="_blank" rel="noopener noreferrer">
-            https://support.google.com/googleplay/android-developer/answer/10787469
-          </a>
-        </li>
-      </ul>
-
-      <h2>Terms &amp; Policies</h2>
-      <p>
-        Use of Google AdMob / Google Mobile Ads SDK is governed by Google’s applicable terms and policies, including:
-      </p>
-      <ul>
-        <li>
-          AdMob Terms of Service:<br />
-          <a href="https://developers.google.com/admob/terms" target="_blank" rel="noopener noreferrer">
-            https://developers.google.com/admob/terms
-          </a>
-        </li>
-        <li>
-          Google Mobile Ads SDK Terms of Service:<br />
-          <a href="https://developers.google.com/ad-manager/mobile-ads-sdk/terms" target="_blank" rel="noopener noreferrer">
-            https://developers.google.com/ad-manager/mobile-ads-sdk/terms
-          </a>
-        </li>
-        <li>
-          Google Privacy Policy:<br />
-          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
-            https://policies.google.com/privacy
-          </a>
-        </li>
-      </ul>
-
-      <p class="muted">
-        Note: Links and policy names may change over time; refer to Google’s official documentation for the most current versions.
-      </p>
-    </section>
-
-    <footer>
-      <strong>AFK GAMES STUDIO</strong><br />
-      Support: <a href="mailto:afkstudios.dev@gmail.com">afkstudios.dev@gmail.com</a>
-    </footer>
   </div>
 </body>
 </html>

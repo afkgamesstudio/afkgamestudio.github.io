@@ -7,519 +7,252 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      /* Brand */
-      --primary: #2b6cb0;
-      --primary-dark: #0b1b38;
-      --accent: #4cc9ff;
-      --accent-2: #7c3aed;
+    :root {
+      /* Deep Space Brand Palette */
+      --primary: #3b82f6;
+      --primary-dark: #1d4ed8;
+      --accent: #60a5fa;
+      --accent-2: #8b5cf6;
 
-      /* Surface */
-      --text-main: #0f172a;
-      --text-light: #475569;
-      --bg-body: #f6f8fc;
-      --bg-surface: rgba(255,255,255,0.86);
-      --border: rgba(148,163,184,0.25);
+      /* Professional Dark Surface */
+      --text-main: #f8fafc;
+      --text-light: #94a3b8;
+      --bg-body: #0b1120;
+      --bg-surface: rgba(30, 41, 59, 0.7);
+      --border: rgba(148, 163, 184, 0.15);
 
-      /* Shadows */
-      --shadow-sm: 0 1px 2px rgba(15,23,42,.06);
-      --shadow-md: 0 10px 30px rgba(15,23,42,.10);
-      --shadow-lg: 0 18px 60px rgba(15,23,42,.14);
-
-      /* Radius */
-      --r-sm: 12px;
-      --r-md: 16px;
-
-      /* Motion */
-      --ease: cubic-bezier(.2,.8,.2,1);
-      --dur: 260ms;
+      /* Radius & Shadows */
+      --r-md: 20px;
+      --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      --ease: cubic-bezier(.4, 0, .2, 1);
+      --dur: 300ms;
     }
 
-    *{ box-sizing:border-box; }
-    html, body { height: 100%; }
-    body{
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
       color: var(--text-main);
       background: var(--bg-body);
       margin: 0;
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
 
-    .container{ max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-    /* ---------- Animated Background (enterprise, subtle) ---------- */
-    .bg{
+    /* ---------- Professional Deep Blue Gradient ---------- */
+    .bg {
       position: fixed;
       inset: 0;
       z-index: -2;
-      background:
-        radial-gradient(1100px 700px at 15% 10%, rgba(76,201,255,.18), transparent 60%),
-        radial-gradient(1000px 650px at 85% 20%, rgba(124,58,237,.12), transparent 62%),
-        radial-gradient(900px 700px at 70% 90%, rgba(43,108,176,.16), transparent 60%),
-        linear-gradient(140deg, #f6f8fc 0%, #f2f6ff 40%, #f7fbff 100%);
-      animation: bgShift 18s var(--ease) infinite alternate;
+      background: 
+        radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.1), transparent 40%),
+        linear-gradient(135deg, #0b1120 0%, #0f172a 50%, #1e293b 100%);
     }
 
-    @keyframes bgShift{
-      0% { filter: hue-rotate(0deg) saturate(1); transform: scale(1); }
-      100% { filter: hue-rotate(-8deg) saturate(1.05); transform: scale(1.02); }
-    }
-
-    /* Glass noise + vignette */
-    .bg::before{
-      content:"";
-      position:absolute; inset:-40px;
-      background:
-        radial-gradient(800px 500px at 50% 0%, rgba(255,255,255,.55), transparent 60%),
-        radial-gradient(900px 700px at 50% 120%, rgba(15,23,42,.10), transparent 60%);
-      pointer-events:none;
-    }
-
-    /* Particles canvas sits behind content */
-    #bgParticles{
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      opacity: .55;
-    }
-
-    /* ---------- Header (sticky glass + scroll polish) ---------- */
-    header{
+    /* ---------- Header ---------- */
+    header {
       position: sticky;
       top: 0;
       z-index: 50;
-      padding: 22px 0;
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.64));
+      padding: 20px 0;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(15, 23, 42, 0.8);
       border-bottom: 1px solid var(--border);
-      transition: padding var(--dur) var(--ease), box-shadow var(--dur) var(--ease), background var(--dur) var(--ease);
-      box-shadow: var(--shadow-sm);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     }
 
-    header.is-scrolled{
-      padding: 14px 0;
-      box-shadow: 0 10px 30px rgba(15,23,42,.08);
-      background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.70));
-    }
+    .header-content { display: flex; align-items: center; gap: 20px; }
+    .logo { height: 60px; filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5)); }
 
-    .header-content{
-      display:flex;
-      align-items:center;
-      gap: 18px;
-    }
-
-    .logo{
-      height: 56px;
-      width:auto;
-      filter: drop-shadow(0 8px 18px rgba(15,23,42,.10));
-      transition: transform var(--dur) var(--ease);
-    }
-
-    header.is-scrolled .logo{ transform: scale(.96); }
-
-    .brand-text h1{
-      font-size: 1.5rem;
+    .brand-text h1 {
+      font-size: 1.6rem;
       font-weight: 800;
       margin: 0;
       letter-spacing: -0.03em;
       text-transform: uppercase;
-      background: linear-gradient(90deg, #0b1b38, #2b6cb0, #0b1b38);
+      background: linear-gradient(90deg, #60a5fa, #a78bfa);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
-    .tagline{
-      color: var(--text-light);
-      font-size: .98rem;
-      font-weight: 600;
-      margin-top: 2px;
-    }
+    .tagline { color: var(--text-light); font-size: 0.9rem; font-weight: 500; }
 
     /* ---------- Main ---------- */
-    main{ padding: 46px 0 70px; }
+    main { padding: 60px 0 100px; }
 
-    .hero{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap: 18px;
-      margin-bottom: 28px;
+    .section-header { margin-bottom: 40px; text-align: center; }
+    .section-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; }
+    .subnote { color: var(--text-light); max-width: 700px; margin: 0 auto; }
+
+    /* ---------- Grid & Cards ---------- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 30px;
     }
 
-    .section-title{
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: #0b1b38;
-      margin: 0 0 10px 0;
-      letter-spacing: -0.02em;
-      position: relative;
-      padding-left: 14px;
-    }
-
-    .section-title::before{
-      content:"";
-      position:absolute;
-      left:0; top: 6px;
-      width: 4px; height: 18px;
-      border-radius: 999px;
-      background: linear-gradient(180deg, var(--accent), var(--accent-2));
-      box-shadow: 0 8px 20px rgba(76,201,255,.25);
-    }
-
-    .subnote{
-      margin: 0;
-      color: var(--text-light);
-      font-weight: 500;
-      max-width: 720px;
-    }
-
-    /* Search (filters cards on-page) */
-    .toolbar{
-      display:flex;
-      align-items:center;
-      gap: 10px;
-      justify-content:flex-end;
-      min-width: 260px;
-    }
-
-    .search{
-      width: 100%;
-      display:flex;
-      align-items:center;
-      gap: 10px;
-      padding: 12px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.82);
-      box-shadow: 0 12px 40px rgba(15,23,42,.06);
-      transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
-    }
-
-    .search:focus-within{
-      border-color: rgba(76,201,255,.55);
-      transform: translateY(-1px);
-    }
-
-    .search svg{ opacity:.7; }
-    .search input{
-      border: none;
-      outline: none;
-      width: 100%;
-      font: inherit;
-      background: transparent;
-      color: var(--text-main);
-    }
-
-    /* Grid */
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 22px;
-      margin-top: 18px;
-    }
-
-    .card{
-      position: relative;
-      background: rgba(255,255,255,.78);
+    .card {
+      background: var(--bg-surface);
       border-radius: var(--r-md);
       border: 1px solid var(--border);
-      box-shadow: var(--shadow-md);
       overflow: hidden;
-      transform: translateZ(0);
-      transition: transform 360ms var(--ease), box-shadow 360ms var(--ease), border-color var(--dur) var(--ease);
-      display:flex;
-      flex-direction:column;
-      padding: 26px;
+      transition: all var(--dur) var(--ease);
+      display: flex;
+      flex-direction: column;
     }
 
-    /* Glow edge */
-    .card::before{
-      content:"";
-      position:absolute;
-      inset:-2px;
-      background: radial-gradient(700px 260px at var(--mx, 40%) var(--my, 0%),
-        rgba(76,201,255,.20),
-        rgba(124,58,237,.10),
-        transparent 55%);
-      opacity: 0;
-      transition: opacity 360ms var(--ease);
-      pointer-events:none;
-    }
-
-    .card:hover{
-      transform: translateY(-4px);
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: var(--primary);
       box-shadow: var(--shadow-lg);
-      border-color: rgba(76,201,255,.45);
-    }
-    .card:hover::before{ opacity: 1; }
-
-    .card h2{
-      margin: 0 0 10px 0;
-      font-size: 1.15rem;
-      color: #0b1b38;
-      font-weight: 800;
-      letter-spacing: -0.02em;
     }
 
-    .card p{
-      color: var(--text-light);
-      margin: 0 0 18px 0;
-      flex-grow: 1;
-    }
-
-    /* Legal links as premium buttons */
-    .legal-links{
-      list-style:none;
-      padding: 16px 0 0 0;
-      margin: 0;
-      border-top: 1px solid rgba(148,163,184,0.22);
-      display:flex;
-      flex-direction:column;
-      gap: 10px;
-    }
-
-    .legal-links a{
+    /* Image Container (Banner Style) */
+    .card-image {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
       position: relative;
-      text-decoration:none;
-      color: #0b1b38;
-      font-weight: 700;
-      font-size: .95rem;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 10px;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(148,163,184,0.22);
-      background: linear-gradient(180deg, rgba(240,248,255,.92), rgba(255,255,255,.78));
-      transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
-      overflow:hidden;
     }
 
-    .legal-links a .left{
-      display:flex;
-      align-items:center;
-      gap: 10px;
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 500ms var(--ease);
     }
 
-    .pill{
-      width: 32px; height: 32px;
+    .card:hover .card-image img { transform: scale(1.05); }
+
+    .card-content { padding: 30px; flex-grow: 1; }
+    .card h2 { margin: 0 0 12px 0; font-size: 1.4rem; color: #fff; }
+    .card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 25px; }
+
+    /* Legal Links Layout */
+    .legal-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .legal-links a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px;
       border-radius: 10px;
-      display:grid; place-items:center;
-      background: linear-gradient(135deg, rgba(76,201,255,.18), rgba(124,58,237,.12));
-      border: 1px solid rgba(76,201,255,.25);
-      box-shadow: 0 10px 24px rgba(15,23,42,.06);
-      flex: 0 0 auto;
+      text-align: center;
+      transition: background var(--dur), transform var(--dur);
+      border: 1px solid transparent;
     }
 
-    .legal-links a:hover{
-      transform: translateY(-1px);
-      border-color: rgba(76,201,255,.48);
-      box-shadow: 0 16px 40px rgba(15,23,42,.10);
+    .legal-links a:hover {
+      background: rgba(59, 130, 246, 0.2);
+      border-color: var(--primary);
+      transform: translateY(-2px);
     }
 
-    /* Shine sweep */
-    .legal-links a::after{
-      content:"";
-      position:absolute;
-      top:-60%;
-      left:-30%;
-      width: 60%;
-      height: 220%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent);
-      transform: rotate(18deg) translateX(-120%);
-      transition: transform 520ms var(--ease);
-      pointer-events:none;
-    }
-    .legal-links a:hover::after{
-      transform: rotate(18deg) translateX(260%);
-    }
-
-    .arrow{
-      opacity:.75;
-      transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
-    }
-    .legal-links a:hover .arrow{
-      transform: translateX(3px);
-      opacity: 1;
-    }
-
-    /* Accessible focus */
-    a:focus-visible, input:focus-visible{
-      outline: 3px solid rgba(76,201,255,.45);
-      outline-offset: 3px;
-      border-radius: 12px;
-    }
+    .legal-links .full-width { grid-column: span 2; }
 
     /* ---------- Footer ---------- */
-    footer{
-      background: linear-gradient(180deg, rgba(11,27,56,1), rgba(8,16,34,1));
-      color: rgba(226,232,240,.85);
-      padding: 46px 0;
-      text-align:center;
-      font-size: .95rem;
-      border-top: 1px solid rgba(148,163,184,0.14);
+    footer {
+      background: #020617;
+      padding: 60px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
     }
 
-    .jurisdiction{
-      color: #fff;
-      font-weight: 800;
-      font-size: .98rem;
-      margin-bottom: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
+    .jurisdiction { color: var(--primary); font-weight: 800; font-size: 0.8rem; letter-spacing: 0.1em; margin-bottom: 10px; }
+    footer p { color: var(--text-light); font-size: 0.9rem; }
+    footer a { color: var(--primary); text-decoration: none; font-weight: 700; }
 
-    .footer-links a{
-      color: rgba(76,201,255,.95);
-      text-decoration:none;
-      font-weight: 700;
-    }
-
-    /* ---------- Responsive ---------- */
-    @media (max-width: 860px){
-      .hero{ flex-direction: column; align-items: stretch; }
-      .toolbar{ justify-content:flex-start; min-width: 0; }
-    }
-    @media (max-width: 640px){
-      .header-content{ flex-direction: column; text-align: center; }
-      .logo{ height: 50px; }
-      .grid{ grid-template-columns: 1fr; }
-      main{ padding: 34px 0 62px; }
-    }
-
-    /* ---------- Reduced motion ---------- */
-    @media (prefers-reduced-motion: reduce){
-      .bg{ animation: none; }
-      .card, .legal-links a, header, .logo{ transition: none; }
-      .legal-links a::after{ display:none; }
-    }
-
-    /* ---------- Entrance animation (subtle) ---------- */
-    .reveal{
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 520ms var(--ease), transform 520ms var(--ease);
-    }
-    .reveal.is-in{
-      opacity: 1;
-      transform: translateY(0);
-    }
-    @media (prefers-reduced-motion: reduce){
-      .reveal{ opacity:1; transform:none; }
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+      .card-image { height: 180px; }
     }
   </style>
 </head>
-
 <body>
-  <!-- Background layers -->
-  <div class="bg" aria-hidden="true"></div>
-  <canvas id="bgParticles" aria-hidden="true"></canvas>
+  <div class="bg"></div>
 
-  <header id="siteHeader">
+  <header>
     <div class="container header-content">
-      <img src="assets/afk-logo.png" alt="AFK GAMES STUDIO Logo" class="logo">
+      <img src="assets/afk-logo.png" alt="Logo" class="logo">
       <div class="brand-text">
         <h1>AFK GAMES STUDIO</h1>
-        <div class="tagline">Official Corporate Portal & Legal Repository</div>
+        <div class="tagline">Enterprise Compliance Portal</div>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <div class="hero">
-      <div>
-        <h2 class="section-title">Active Portfolio & Legal Frameworks</h2>
-        <p class="subnote">Centralized, versioned policy repository for AFK products. Search below to locate Privacy Policies, Terms, and third-party notices across the portfolio.</p>
-      </div>
-
-      <div class="toolbar">
-        <div class="search" role="search" aria-label="Search policies">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M21 21l-4.3-4.3m1.3-5.2a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          <input id="policySearch" type="search" placeholder="Search app or document (e.g., 'privacy', 'terms', 'Tap')" autocomplete="off" />
-        </div>
-      </div>
+    <div class="section-header">
+      <h2 class="section-title">Global Portfolio</h2>
+      <p class="subnote">Official legal repository for AFK GAMES STUDIO software and tactical systems.</p>
     </div>
 
     <div class="grid">
-      <div class="card reveal" data-search="tap odyssey privacy policy terms third party notices">
-        <h2>Tap Odyssey</h2>
-        <p>High-performance rhythmic arcade experience operating under strict data minimization protocols.</p>
-        <ul class="legal-links">
-          <li>
-            <a href="tap-odyssey/privacy-policy.html">
-              <span class="left">
-                <span class="pill" aria-hidden="true">🛡️</span>
-                <span>Privacy Policy</span>
-              </span>
-              <span class="arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-          <li>
-            <a href="tap-odyssey/terms-of-use.html">
-              <span class="left">
-                <span class="pill" aria-hidden="true">📜</span>
-                <span>Terms of Service</span>
-              </span>
-              <span class="arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-          <li>
-            <a href="tap-odyssey/third-party-notices.html">
-              <span class="left">
-                <span class="pill" aria-hidden="true">🧩</span>
-                <span>Third-Party Notices</span>
-              </span>
-              <span class="arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-        </ul>
+      <div class="card">
+        <div class="card-image"><img src="assets/qr-decoder-banner.jpg" alt="QR Decoder Banner"></div>
+        <div class="card-content">
+          <h2>QR Decoder & Scanner</h2>
+          <p>Enterprise-grade scanning utility featuring advanced OCR and secure document processing.</p>
+          <div class="legal-links">
+            <a href="qr-decoder/privacy-policy.html">Privacy Policy</a>
+            <a href="qr-decoder/terms-of-use.html">Terms of Use</a>
+            <a href="qr-decoder/third-party-notices.html" class="full-width">Third-Party Notices</a>
+          </div>
+        </div>
       </div>
 
-      <div class="card reveal" data-search="xo arcade infinity edition privacy policy terms third party notices zero protocol">
-        <h2>XO Arcade: Infinity Edition</h2>
-        <p>Advanced logic engine featuring the proprietary offline ZERO Protocol AI system.</p>
-        <ul class="legal-links">
-          <li>
-            <a href="xo-arcade/privacy-policy.html">
-              <span class="left">
-                <span class="pill" aria-hidden="true">🛡️</span>
-                <span>Privacy Policy</span>
-              </span>
-              <span class="arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-          <li>
-            <a href="xo-arcade/terms-of-use.html">
-              <span class="left">
-                <span class="pill" aria-hidden="true">📜</span>
-                <span>Terms of Service</span>
-              </span>
-              <span class="arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-          <li>
-            <a href="xo-arcade/third-party-notices.html">
-              <span class="left">
-                <span class="pill" aria-hidden="true">🧩</span>
-                <span>Third-Party Notices</span>
-              </span>
-              <span class="arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-        </ul>
+      <div class="card">
+        <div class="card-image"><img src="assets/xo-arcade-banner.jpg" alt="XO Arcade Banner"></div>
+        <div class="card-content">
+          <h2>XO Arcade: Infinity Edition</h2>
+          <p>Strategic grid combat featuring the proprietary offline ZERO Protocol AI system.</p>
+          <div class="legal-links">
+            <a href="xo-arcade/privacy-policy.html">Privacy Policy</a>
+            <a href="xo-arcade/terms-of-use.html">Terms of Use</a>
+            <a href="xo-arcade/third-party-notices.html" class="full-width">Third-Party Notices</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image"><img src="assets/air-strike-banner.jpg" alt="Air Strike Banner"></div>
+        <div class="card-content">
+          <h2>Air Strike Arcade</h2>
+          <p>High-intensity tactical air combat utilizing local AI-driven tactical patterns.</p>
+          <div class="legal-links">
+            <a href="air-strike-arcade/privacy-policy.html">Privacy Policy</a>
+            <a href="air-strike-arcade/terms-of-use.html">Terms of Use</a>
+            <a href="air-strike-arcade/third-party-notices.html" class="full-width">Third-Party Notices</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image"><img src="assets/tap-odyssey-banner.jpg" alt="Tap Odyssey Banner"></div>
+        <div class="card-content">
+          <h2>Tap Odyssey</h2>
+          <p>Rhythmic arcade experience with skin customization and world exploration logic.</p>
+          <div class="legal-links">
+            <a href="tap-odyssey/privacy-policy.html">Privacy Policy</a>
+            <a href="tap-odyssey/terms-of-use.html">Terms of Use</a>
+            <a href="tap-odyssey/third-party-notices.html" class="full-width">Third-Party Notices</a>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -527,148 +260,9 @@
   <footer>
     <div class="container">
       <div class="jurisdiction">Statutory Jurisdiction: Orange County, Florida, USA</div>
-      <p>&copy; 2026 AFK GAMES STUDIO. All rights reserved. | Enterprise Compliance Division</p>
-      <p>Contact: <a class="footer-links" href="mailto:afkstudios.dev@gmail.com">afkstudios.dev@gmail.com</a></p>
+      <p>&copy; 2026 AFK GAMES STUDIO. All rights reserved.</p>
+      <p>Contact: <a href="mailto:afkstudios.dev@gmail.com">afkstudios.dev@gmail.com</a></p>
     </div>
   </footer>
-
-  <script>
-    // ----- Header scroll polish -----
-    const header = document.getElementById('siteHeader');
-    const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 6);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    // ----- Reveal on view (enterprise subtle entrance) -----
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const revealEls = Array.from(document.querySelectorAll('.reveal'));
-    if (!prefersReduced && 'IntersectionObserver' in window) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) e.target.classList.add('is-in');
-        });
-      }, { threshold: 0.12 });
-      revealEls.forEach(el => io.observe(el));
-    } else {
-      revealEls.forEach(el => el.classList.add('is-in'));
-    }
-
-    // ----- Search filter (apps + docs) -----
-    const searchInput = document.getElementById('policySearch');
-    const cards = Array.from(document.querySelectorAll('.card'));
-    const normalize = (s) => (s || '').toLowerCase().trim();
-
-    searchInput.addEventListener('input', () => {
-      const q = normalize(searchInput.value);
-      cards.forEach(card => {
-        const hay = normalize(card.getAttribute('data-search')) + ' ' + normalize(card.innerText);
-        const show = !q || hay.includes(q);
-        card.style.display = show ? '' : 'none';
-      });
-    });
-
-    // ----- Card glow follow (mouse) -----
-    cards.forEach(card => {
-      card.addEventListener('pointermove', (e) => {
-        const r = card.getBoundingClientRect();
-        const mx = ((e.clientX - r.left) / r.width) * 100;
-        const my = ((e.clientY - r.top) / r.height) * 100;
-        card.style.setProperty('--mx', mx + '%');
-        card.style.setProperty('--my', my + '%');
-      }, { passive: true });
-    });
-
-    // ----- Animated particles (lightweight, enterprise) -----
-    (function(){
-      const canvas = document.getElementById('bgParticles');
-      const ctx = canvas.getContext('2d', { alpha: true });
-      if (!ctx) return;
-
-      if (prefersReduced) return;
-
-      let w, h, dpr, particles, raf;
-      const colors = [
-        'rgba(76,201,255,0.55)',
-        'rgba(43,108,176,0.45)',
-        'rgba(124,58,237,0.35)'
-      ];
-
-      function resize(){
-        dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
-        w = Math.floor(window.innerWidth);
-        h = Math.floor(window.innerHeight);
-        canvas.width = Math.floor(w * dpr);
-        canvas.height = Math.floor(h * dpr);
-        canvas.style.width = w + 'px';
-        canvas.style.height = h + 'px';
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-        const count = Math.floor(Math.max(38, Math.min(90, (w * h) / 22000)));
-        particles = Array.from({ length: count }, () => makeParticle(true));
-      }
-
-      function makeParticle(init){
-        const p = {
-          x: init ? Math.random() * w : (Math.random() < 0.5 ? -20 : w + 20),
-          y: Math.random() * h,
-          r: 0.8 + Math.random() * 2.2,
-          vx: (-0.08 + Math.random() * 0.16),
-          vy: (0.04 + Math.random() * 0.14),
-          a: 0.18 + Math.random() * 0.35,
-          c: colors[(Math.random() * colors.length) | 0]
-        };
-        return p;
-      }
-
-      function step(){
-        ctx.clearRect(0,0,w,h);
-
-        // soft lines
-        ctx.globalCompositeOperation = 'lighter';
-        for (let i=0;i<particles.length;i++){
-          const p = particles[i];
-          p.x += p.vx;
-          p.y += p.vy;
-
-          // wrap
-          if (p.y > h + 30) { p.y = -30; p.x = Math.random() * w; }
-          if (p.x < -40) p.x = w + 40;
-          if (p.x > w + 40) p.x = -40;
-
-          // dot
-          ctx.beginPath();
-          ctx.fillStyle = p.c;
-          ctx.globalAlpha = p.a;
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          ctx.fill();
-
-          // vertical streak (very subtle)
-          if (Math.random() < 0.06){
-            ctx.globalAlpha = p.a * 0.35;
-            ctx.strokeStyle = p.c;
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y - 8);
-            ctx.lineTo(p.x, p.y + 18);
-            ctx.stroke();
-          }
-        }
-        ctx.globalAlpha = 1;
-        ctx.globalCompositeOperation = 'source-over';
-        raf = requestAnimationFrame(step);
-      }
-
-      const vis = () => {
-        if (document.hidden) cancelAnimationFrame(raf);
-        else raf = requestAnimationFrame(step);
-      };
-
-      window.addEventListener('resize', resize, { passive: true });
-      document.addEventListener('visibilitychange', vis);
-
-      resize();
-      step();
-    })();
-  </script>
 </body>
 </html>

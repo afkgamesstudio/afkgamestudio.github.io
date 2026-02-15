@@ -1,100 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Air Strike Arcade | AFK GAMES STUDIO</title>
-    <style>
-        :root { --primary-color: #2c5282; --accent-color: #2b6cb0; --text-color: #1a202c; --bg-color: #ffffff; --box-bg: #f7fafc; }
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; color: var(--text-color); max-width: 850px; margin: 0 auto; padding: 40px 20px; background: var(--bg-color); }
-        .legal-wrapper { border-top: 6px solid var(--primary-color); padding-top: 30px; }
-        h1 { font-size: 2.2rem; color: var(--text-color); text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 5px; text-align: center; }
-        h2 { font-size: 1.25rem; color: var(--primary-color); border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-top: 40px; text-transform: uppercase; font-weight: 700; }
-        p, li { margin-bottom: 15px; text-align: justify; }
-        ul { padding-left: 20px; }
-        .date-badge { display: block; text-align: center; background: var(--box-bg); padding: 8px 15px; border-radius: 4px; font-size: 0.9rem; color: #4a5568; margin-bottom: 40px; font-weight: 600; text-transform: uppercase; }
-        .highlight-box { background: #ebf8ff; border-left: 4px solid var(--accent-color); padding: 20px; margin: 30px 0; border-radius: 0 4px 4px 0; }
-        .security-box { background: #fff5f5; border-left: 4px solid #c53030; padding: 20px; margin: 30px 0; border-radius: 0 4px 4px 0; }
-        footer { margin-top: 60px; padding-top: 30px; border-top: 2px solid #edf2f7; font-size: 0.95rem; color: #4a5568; line-height: 1.5; }
-        a { color: var(--accent-color); text-decoration: none; font-weight: bold; }
-        strong { color: #2d3748; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Air Strike Arcade | AFK GAMES STUDIO</title>
+  <style>
+    :root{
+      --primary:#1e3a8a;
+      --text-main:#111827;
+      --text-muted:#4b5563;
+      --bg-body:#ffffff;
+      --surface:#f9fafb;
+      --border:#e5e7eb;
+      --highlight:#eff6ff;
+      --link:#2563eb;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      background:var(--bg-body);
+      color:var(--text-main);
+      font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height:1.6;
+    }
+    .wrap{
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 56px 22px 80px;
+    }
+    .header{
+      border-bottom: 4px solid var(--primary);
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+      text-align:center;
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: 1.75rem;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: var(--primary);
+      font-weight: 900;
+    }
+    .meta{
+      color: var(--text-muted);
+      font-size: .92rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+    .top-links{
+      margin: 16px 0 26px;
+      color: var(--text-muted);
+      font-size: .98rem;
+      text-align:center;
+    }
+    .top-links a{
+      color: var(--link);
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .top-links a:hover{ text-decoration: underline; }
+
+    .card{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .doc{
+      margin: 0;
+      background:#ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      color: var(--text-main);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    a{ color: var(--link); }
+  </style>
 </head>
+
 <body>
-    <div class="legal-wrapper">
-        <h1>Privacy Policy</h1>
-        <div class="date-badge">Air Strike Arcade | Effective: Feb 14, 2026 | Updated: Feb 14, 2026</div>
-
-        <section>
-            <h2>1. Corporate Declaration and Entity Scope</h2>
-            <p>This Privacy Policy governs the data practices of <strong>AFK GAMES STUDIO</strong> (“the Studio,” “we,” “us,” or “our”) regarding the mobile application <strong>Air Strike Arcade</strong> (the “App”). The Studio operates under a strict <strong>Data Minimization Protocol</strong>. We do not require account registration, and we do not directly collect or store Personally Identifiable Information (PII) such as legal names, physical addresses, or contact credentials.</p>
-        </section>
-
-        <section class="highlight-box">
-            <h2>2. Data Segregation and Local Storage (Offline-First)</h2>
-            <p>The App is engineered as a primary offline experience. To facilitate core functionality, specific telemetry is stored exclusively on the user’s device via <strong>SharedPreferences</strong> and is not transmitted to Studio-operated servers. This data includes:</p>
-            <ul>
-                <li><strong>Game State:</strong> Local progress, combat statistics, and user preferences (Haptics, Music, SFX).</li>
-                <li><strong>ZERO Protocol:</strong> AI/CPU tactical learning telemetry. This data is non-biometric, processed locally, and intended solely for enhancing CPU difficulty through internal algorithmic adjustments.</li>
-            </ul>
-            <p>Users maintain absolute control over this data and may execute a permanent erasure at any time via the in-game <strong>“Wipe Memory”</strong> function.</p>
-        </section>
-
-        <section>
-            <h2>3. Automated Third-Party Processing</h2>
-            <p>The App integrates Enterprise SDKs to facilitate monetization and diagnostics. These partners (Google AdMob and Google Play Services) may automatically ingest:</p>
-            <ul>
-                <li><strong>Persistent Identifiers:</strong> Google Advertising ID (GAID), IP addresses (for approximate location), and device metadata.</li>
-                <li><strong>Technical Telemetry:</strong> Hardware specifications, Android OS version, and runtime diagnostics.</li>
-            </ul>
-            <p>Users may exercise their right to limit tracking via Android System Settings (Settings > Google > Ads).</p>
-        </section>
-
-        <section>
-            <h2>4. Synthetic Media and Audio Asset Disclosure</h2>
-            <p>The App incorporates assets generated via advanced AI technologies and licensed libraries:</p>
-            <ul>
-                <li><strong>Suno AI:</strong> Musical compositions generated under a valid commercial license held by AFK GAMES STUDIO.</li>
-                <li><strong>Pixabay:</strong> Sound effects (SFX) utilized under the Pixabay Content License.</li>
-            </ul>
-            <p>These technologies do not collect user telemetry through the App interface.</p>
-        </section>
-
-        <section>
-            <h2>5. Global Regulatory Compliance</h2>
-            <ul>
-                <li><strong>COPPA (US):</strong> The App is intended for a general audience and is not directed to children under 13.</li>
-                <li><strong>GDPR (EEA/UK):</strong> Processing of technical data is based on our Legitimate Interest. Consent for advertising is managed via the Google User Messaging Platform (UMP).</li>
-                <li><strong>CCPA (California):</strong> We do not “sell” personal information. Data sharing is limited to defined business purposes.</li>
-            </ul>
-        </section>
-
-        <section class="security-box">
-            <h2>6. Data Security and Integrity</h2>
-            <p>We utilize commercially acceptable security protocols to protect the integrity of processed telemetry. However, given the nature of electronic transmission, absolute security cannot be guaranteed.</p>
-        </section>
-
-        <section>
-            <h2>7. Data Retention Policy</h2>
-            <p>Local game telemetry is retained indefinitely until manual erasure by the user or App uninstallation. Third-party advertising data is retained by Google according to their statutory retention cycles (typically 14–26 months).</p>
-        </section>
-
-        <section>
-            <h2>8. Governing Law and Jurisdiction</h2>
-            <p>This Policy is governed by the laws of the <strong>State of Florida, USA</strong>. Any disputes arising from these data practices shall be subject to the exclusive jurisdiction of the state and federal courts located in <strong>Orange County, Florida</strong>.</p>
-        </section>
-
-        <section>
-            <h2>9. Corporate Contact</h2>
-            <p>For inquiries regarding this Policy or your data rights, contact the AFK GAMES STUDIO compliance desk:</p>
-            <p><strong>AFK GAMES STUDIO</strong><br>
-            Email: <a href="mailto:afkstudios.dev@gmail.com">afkstudios.dev@gmail.com</a></p>
-        </section>
-
-        <footer>
-            &copy; 2026 AFK GAMES STUDIO. All rights reserved. <br>
-            QR Decoder, XO Arcade, and Air Strike Arcade are proprietary marks of AFK GAMES STUDIO.
-        </footer>
+  <div class="wrap">
+    <div class="header">
+      <h1>Privacy Policy</h1>
+      <div class="meta">Air Strike Arcade | AFK GAMES STUDIO</div>
     </div>
+
+    <div class="top-links">
+      <a href="terms-of-use.html">Terms of Service</a>
+      &nbsp;•&nbsp;
+      <a href="privacy-policy.html">Privacy Policy</a>
+      &nbsp;•&nbsp;
+      <a href="third-party-notices.html">Third-Party Notices</a>
+    </div>
+
+    <div class="card">
+      <!-- 1:1 VERBATIM COPY (matches your offline TXT) -->
+      <pre class="doc">PRIVACY POLICY — AIR STRIKE ARCADE
+Effective Date: February 15, 2026
+Last Updated: February 15, 2026
+Most current version (web): https://afkgamesstudio.github.io/afkgamestudio.github.io/air-strike-arcade/privacy-policy.html
+
+1. SCOPE; ENTITY; ROLES
+This Privacy Policy describes how AFK GAMES STUDIO (“Studio,” “we,” “us,” or “our”) processes information in connection with the mobile application Air Strike Arcade (the “App”).
+The App is designed as an offline-first experience. We do not require account registration, and we do not directly request or collect information such as legal names, physical addresses, or account credentials.
+However, the App uses third-party SDKs (including Google AdMob and Google Play Services) that may process identifiers and technical information (which may be considered “personal data” or “personal information” under certain laws) as described below.
+
+2. INFORMATION PROCESSED ON YOUR DEVICE (OFFLINE-FIRST)
+
+2.1 Local Game Data (ZERO Data). The App stores certain information locally on your device to provide core functionality for single-player gameplay, including CPU/AI difficulty and behavior data (the “ZERO” data) processed on-device.
+
+2.2 User Controls (Local Deletion). Because the App is offline-first, App data described in Section 2.1 is stored locally on your device. You can delete local App data by:
+Using the App’s in-game deletion control (e.g., a “Wipe Memory” / “Reset” button available in the main menu); and/or
+Clearing the App’s storage/data via your device settings (typically: Settings → Apps → Air Strike Arcade → Storage → Clear storage/Clear data); and/or
+Uninstalling the App, subject to your device and operating system backup settings.
+Note: Clearing cache may remove temporary files but may not remove all locally stored App data, depending on OS behavior.
+
+3. INFORMATION PROCESSED BY THIRD PARTIES (AUTOMATED COLLECTION)
+The App integrates third-party SDKs for advertising and platform functionality. These third parties may automatically collect or receive certain information, which may include:
+Advertising/Device Identifiers: Google Advertising ID (or equivalent identifiers), device identifiers, and app instance identifiers.
+Network/Location Signals: IP address and approximate location inferred from IP.
+Device/Technical Data: device model, hardware/OS version, language, time zone, App version, diagnostics, and performance data.
+Advertising Data: ad impressions, clicks, ad interaction events, frequency capping signals, and anti-fraud signals.
+We do not operate our own analytics or advertising servers for these functions; instead, third parties process this information under their own terms and policies and, in some cases, as independent controllers.
+
+4. HOW INFORMATION IS USED
+We use (or enable third parties to use) information to:
+Provide and maintain App functionality (e.g., local gameplay operation and local data deletion controls).
+Display, measure, and optimize ads; prevent fraud and abuse; enforce policy compliance.
+Maintain security and stability (e.g., troubleshooting, crash/performance diagnostics).
+Comply with legal obligations.
+
+5. LEGAL BASES (EEA/UK)
+Where GDPR/UK GDPR applies:
+Consent: We rely on your consent for personalized advertising where required. Consent choices are managed through the Google User Messaging Platform (UMP) or equivalent in-app consent flow.
+Legitimate Interests: We and/or our partners may process limited technical and security information to provide a secure and stable App, prevent fraud, and measure performance, subject to your rights and applicable law.
+Contract Necessity: Local processing needed to provide the core offline App experience.
+
+6. SHARING; THIRD-PARTY SERVICES
+
+6.1 Advertising and Platform Partners. The App may share information with or allow collection by:
+Google AdMob (advertising, measurement, fraud prevention)
+Google Play Services (platform services and related functionality)
+Your use of these services may be subject to Google’s terms and privacy policies. We are not responsible for third-party services.
+
+6.2 Open Source. The App may include open source components governed by their respective licenses. See the App’s “Third-Party Notices” section.
+
+7. YOUR CHOICES; PRIVACY RIGHTS
+
+7.1 Consent & Ads Preferences (UMP). Where available, you can review or change ad consent choices using the in-app “Privacy Options” (or equivalent), which surfaces UMP choices.
+
+7.2 Device Controls. Depending on your device and region, you may be able to reset or delete your Advertising ID and limit ad personalization through device settings (for example, by searching “Ads” or “Advertising” in system settings).
+
+7.3 California (CCPA/CPRA). We do not “sell” personal information for money. Depending on how “share” is defined under applicable law, certain advertising-related disclosures may be considered “sharing” for cross-context behavioral advertising. Where required, we provide an option to opt out via in-app “Privacy Options” or applicable device settings.
+
+7.4 EEA/UK and Other Regions. Subject to applicable law, you may have rights to access, delete, or object to certain processing. To submit a request, contact us as described in Section 13. Please note that we may be unable to access or delete information held by third parties directly; in those cases, you must use the controls provided by the third party or your device settings.
+
+8. DATA RETENTION
+Local Game Data (ZERO Data) is retained on your device until you delete it using the App’s in-game deletion control, by clearing storage/data using OS controls, or by uninstalling the App (subject to OS backups).
+Third-party data retention is governed by the third parties’ own policies and settings.
+
+9. CHILDREN’S PRIVACY
+The App is not directed to children under 13 and we do not knowingly collect personal information from children under 13. If you believe a child has provided information through the App, contact us and we will take appropriate steps consistent with applicable law.
+
+10. SECURITY
+We use reasonable administrative and technical measures designed to protect information. However, no method of transmission or storage is 100% secure.
+
+11. INTERNATIONAL TRANSFERS
+If you use the App outside the United States, information processed by third-party partners may be transferred to and processed in countries other than your own, including the United States, subject to the partners’ safeguards and policies and applicable law.
+
+12. DATA DELETION (HOW TO DELETE DATA)
+
+12.1 Local (on-device) deletion. You can delete local App data by using the App’s in-game deletion control (e.g., “Wipe Memory” / “Reset”), and/or by clearing storage/data in device settings, and/or uninstalling the App (subject to OS backup settings).
+
+12.2 Third-party data. Some information may be processed by third-party SDKs (e.g., Google AdMob / Google Play Services). The Studio may not be able to directly access, delete, or control data held by third parties. Where available, use:
+The App’s “Privacy Options” (Google UMP) to manage advertising consent/choices; and/or
+Your device settings (e.g., reset/delete Advertising ID or limit ad personalization); and/or
+The third party’s own controls and policies.
+
+12.3 Requests. If you have a privacy or deletion request that applies to Studio-controlled processing, contact us using the details in Section 13.
+
+13. CONTACT
+AFK GAMES STUDIO
+Email: afkstudios.dev@gmail.com</pre>
+    </div>
+  </div>
 </body>
 </html>

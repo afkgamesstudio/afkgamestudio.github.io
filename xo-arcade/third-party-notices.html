@@ -154,7 +154,7 @@
   <div class="wrap">
     <div class="header">
       <h1>Third-Party Notices</h1>
-      <div class="meta">XO Arcade: Infinity Edition | Last Updated: February 14, 2026</div>
+      <div class="meta">XO Arcade: Infinity Edition | Last Updated: February 19, 2026</div>
     </div>
 
     <div class="top-links">
@@ -167,12 +167,12 @@
 
     <div class="card">
       <div class="quick" aria-label="Quick links">
-        <h2>Notices & License Texts</h2>
+        <h2>Notices &amp; License Texts</h2>
         <div class="link-list">
           <a class="link-item" href="apache-2.0.html">
             <div class="link-left">
               <div class="link-title">Apache License 2.0 (Full Text)</div>
-              <div class="link-sub">Full license text referenced in Section 1.3</div>
+              <div class="link-sub">Full license text referenced in Section A.3</div>
             </div>
             <div class="pill">OPEN</div>
           </a>
@@ -213,101 +213,119 @@
 
       <!-- 1:1 VERBATIM COPY (matches your offline TXT) -->
       <pre class="doc">XO ARCADE: INFINITY EDITION — THIRD-PARTY NOTICES
-Last Updated: February 14, 2026
+Version: 1.2
+Last Updated: February 19, 2026
 
-SCOPE
+1. SCOPE
 This Third-Party Notices document applies to XO Arcade: Infinity Edition (the “App”), developed and distributed by AFK GAMES STUDIO (“Studio”).
-It identifies third-party open source software, third-party services/SDKs, and certain third-party or licensed creative assets included in or used by the App.
+It identifies (i) third-party open source software, (ii) third-party services/SDKs, and (iii) certain third-party or licensed creative assets included in or used by the App.
 
 These notices are provided for attribution and statutory compliance only. They do not modify the App’s Terms of Service or Privacy Policy.
-Privacy-related disclosures for third-party SDKs (e.g., advertising identifiers and diagnostics) are described in the Privacy Policy.
+Privacy-related disclosures (e.g., advertising identifiers, approximate location inferred from IP, app interactions, diagnostics, consent signals, and crash reporting) are described in the Privacy Policy and in the applicable provider notices/policies.
 
-LOCATION / AVAILABILITY
+2. LOCATION / AVAILABILITY
 This notice is provided in-app (Settings/About → Third-Party Notices) and may also be available on the Studio website.
 If a web copy differs from this in-app copy, the in-app copy controls for the App build you installed.
 
+3. INCLUDED NOTICES (LINKS / ATTACHMENTS)
+The App includes separate, provider-specific notices and license texts. Where available in this build, they are accessible from this screen as individual links/buttons:
+
+- Google Ad Services Notice: AD_SERVICES_NOTICE.txt
+- Suno Generated Music Notice: SUNO_NOTICE.txt
+- ElevenLabs Generated Voice / SFX Notice: ELEVENLABS_NOTICE.txt
+- Kenney Asset Notice (CC0): KENNEY_NOTICE.txt
+- Apache License 2.0 (Full Text): LICENSE_APACHE_2_0.txt (or equivalent in-app “Apache 2.0” view)
+
+Firebase-related disclosures (Firebase Analytics and Firebase Crashlytics) are included in Section C of this document (no separate notice file in this build).
+
+If any listed file is not present in a specific build variant, the Studio will provide the applicable license/notice upon request.
+
 =======================================================================
-1. OPEN SOURCE SOFTWARE
+A. OPEN SOURCE SOFTWARE (OSS)
 =======================================================================
 
-1.1 Summary
+A.1 Summary
 The App includes open source components. Each component is governed by its own license terms.
 In the event of a conflict between this notice and an applicable open source license, the open source license controls solely with respect to that component.
 
-1.2 Apache License 2.0 Components (Non-Exhaustive)
-The following components are licensed under the Apache License, Version 2.0:
+A.2 Primary OSS License Family (Apache License 2.0) — Non-Exhaustive
+The following primary components are commonly used by the App and are generally licensed under the Apache License, Version 2.0:
 
-- AndroidX Libraries (Core, Lifecycle, Navigation, Splashscreen)
+- AndroidX Libraries (Core KTX, Splashscreen, Lifecycle, Navigation, Activity Compose)
   Copyright (c) The Android Open Source Project
 
-- Jetpack Compose (UI, Material3, Animation, Tooling)
+- Jetpack Compose (BOM, UI, Material3, Animation, Tooling/Preview)
   Copyright (c) The Android Open Source Project
 
 - Kotlin Standard Library
   Copyright (c) JetBrains s.r.o.
 
-- Material Design Icons Extended
+- Material Design related libraries / Material Icons Extended (as applicable)
   Copyright (c) Google LLC
 
-NOTE ON COMPLETENESS: This list is intended to cover the primary Apache 2.0 components used by the App.
-The App may also include additional open source libraries and transitive dependencies that carry their own licenses.
-Where included, license texts and attributions for such components are provided in the same “Third-Party Notices” section or in an accompanying licenses file/package.
+NOTE ON COMPLETENESS: This list is intended to cover primary components. The App may also include additional open source libraries and transitive dependencies that carry their own licenses.
 
-1.3 Apache License 2.0 — License Text
-The full text of the Apache License, Version 2.0 is provided within the App and/or distributed with the App (e.g., LICENSE_APACHE_2.0.txt).
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+A.3 License Text Availability
+The full text of the Apache License, Version 2.0 is provided within the App (see “Apache 2.0” in this screen) and/or distributed with the App package as a license file.
 
 =======================================================================
-2. CREATIVE ASSETS & SYNTHETIC MEDIA
+B. CREATIVE ASSETS &amp; SYNTHETIC MEDIA
 =======================================================================
 
-2.1 Kenney Assets
-- Kenney (Sound Effects / UI SFX)
-  License: CC0 1.0 Universal (Public Domain)
-  Source: https://kenney.nl/
-  Attribution: Not required (CC0), but included here for clarity.
+B.1 Summary
+The App incorporates certain third-party assets and/or synthetic media (AI-generated) used under applicable licenses or Studio subscriptions.
+Users receive no license to extract, redistribute, or commercially exploit these assets outside the App, except as permitted by applicable law and as described in the App’s Terms of Service.
 
-2.2 AI-Generated / Licensed Media
-The App may incorporate audio and/or voice assets generated using third-party AI tools.
-These assets are used under commercial licenses held by the Studio. Users receive no license to extract, redistribute, or commercially exploit these assets outside the App, except as permitted by applicable law and as described in the App’s Terms of Service.
+B.2 Included Assets / Synthetic Media (Build-Dependent)
+- Kenney.nl (Sound Effects / UI SFX)
+  Additional Notice: KENNEY_NOTICE.txt
 
 - Suno (Generated Music)
-  License: Commercial license held by AFK GAMES STUDIO
-  Additional Notice: SUNO_NOTICE.txt (included in the App distribution / project)
+  Additional Notice: SUNO_NOTICE.txt
 
 - ElevenLabs (Generated Voice / SFX)
-  License: Commercial license held by AFK GAMES STUDIO
-  Additional Notice: ELEVENLABS_NOTICE.txt (included in the App distribution / project)
+  Additional Notice: ELEVENLABS_NOTICE.txt
 
 =======================================================================
-3. THIRD-PARTY SERVICES & SDKs
+C. THIRD-PARTY SERVICES &amp; SDKs
 =======================================================================
 
-3.1 Google AdMob / Google Mobile Ads SDK
-- Service: Google AdMob (Advertising SDK)
-- Provider: Google LLC
-- Terms/Policies: Use of this SDK is subject to Google’s applicable terms and policies.
-- Data/Privacy: Advertising-related identifiers, device signals, and diagnostics may be processed by Google as described in the App’s Privacy Policy and Google’s policies.
+C.1 Summary
+The App uses certain third-party services/SDKs (e.g., advertising, consent flows, analytics, and crash reporting).
+Provider data handling may include device identifiers, approximate location inferred from IP, app interaction signals, diagnostics/performance signals, consent state, and crash logs, depending on region, configuration, and user choices.
+See the Privacy Policy and the provider notices/policies for details.
 
-3.2 Google Play Services
-- Service: Google Play Services (Platform services/SDK)
-- Provider: Google LLC
-- Terms/Policies: Use is subject to Google’s applicable terms and policies.
-- Data/Privacy: Certain device/technical information may be processed as described in the App’s Privacy Policy and Google’s policies.
+C.2 Included Services/SDKs
+
+- Google AdMob / Google Mobile Ads SDK
+  Category: Third-Party Service / SDK (Advertising)
+  Provider: Google LLC
+  Purpose: Ad delivery, measurement, frequency capping, fraud prevention
+  Data/Privacy: May process and share advertising/device identifiers, approximate location inferred from IP, app interactions and advertising events, diagnostics/performance signals, and anti-fraud signals, as described in the Privacy Policy and Google’s policies.
+  Additional Notice: AD_SERVICES_NOTICE.txt
+
+- Google User Messaging Platform (UMP)
+  Category: Third-Party Service / SDK (Consent / Privacy Options)
+  Provider: Google LLC
+  Purpose: Consent collection and privacy options flow (where required/available, e.g., EEA/UK)
+  Data/Privacy: May process consent state and related device/technical signals as described in the Privacy Policy and Google’s policies.
+
+- Firebase Analytics
+  Category: Third-Party Service / SDK (Analytics / Measurement)
+  Provider: Google LLC
+  Purpose: App usage measurement and analytics to improve the App
+  Data/Privacy: May process app interaction events, device/technical information, and identifiers used for measurement/analytics, as described in the Privacy Policy and Google’s policies.
+  Policies (Google/Firebase): https://firebase.google.com/support/privacy
+
+- Firebase Crashlytics
+  Category: Third-Party Service / SDK (Diagnostics / Crash Reporting)
+  Provider: Google LLC
+  Purpose: Crash reporting and stability diagnostics
+  Data/Privacy: May collect and process crash logs (e.g., stack traces) and related technical/diagnostic signals to diagnose and fix stability issues, as described in the Privacy Policy and Google’s policies. Crash logs are not shared with non-Google third parties for advertising.
+  Policies (Google/Firebase): https://firebase.google.com/support/privacy
 
 =======================================================================
-PRIVACY & SUPPORT
+D. PRIVACY &amp; SUPPORT
 =======================================================================
 
 Privacy Policy
@@ -320,4 +338,3 @@ Support: afkgames.helpdesk@gmail.com</pre>
   </div>
 </body>
 </html>
-

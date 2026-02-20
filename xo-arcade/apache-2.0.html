@@ -9,7 +9,7 @@
       --primary:#0f172a;   /* Navy/Slate */
       --text:#111827;
       --muted:#4b5563;
-      --bg:#ffffff;        /* ✅ White background for legibility */
+      --bg:#ffffff;        /* White background for legibility */
       --surface:#f9fafb;
       --border:#e5e7eb;
       --highlight:#eff6ff;
@@ -87,7 +87,7 @@
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size: 0.86rem;
       line-height: 1.55;
-      white-space: pre-wrap;     /* wrap for mobile while preserving spacing */
+      white-space: pre-wrap;
       word-break: break-word;
     }
 
@@ -104,6 +104,35 @@
       color: var(--muted);
       margin-top: 8px;
     }
+
+    /* Navigation Bar */
+    .site-nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      justify-content:center;
+      margin-bottom:26px;
+    }
+    .site-nav a{
+      display:inline-block;
+      padding:8px 18px;
+      font-size:.82rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+      text-decoration:none;
+      border-radius:8px;
+      border:1px solid var(--border);
+      color:var(--muted);
+      background:var(--surface, #f9fafb);
+      transition:background .2s,color .2s,border-color .2s;
+    }
+    .site-nav a:hover{
+      background:var(--highlight, #eff6ff);
+      color:var(--primary, #0f172a);
+      border-color:var(--primary, #0f172a);
+      text-decoration:none;
+    }
   </style>
 </head>
 
@@ -114,6 +143,13 @@
       <div class="meta">XO Arcade: Infinity Edition | AFK GAMES STUDIO</div>
     </div>
 
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../index.html">Homepage</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-use.html">Terms of Service</a>
+      <a href="third-party-notices.html">Third-Party Notices</a>
+    </nav>
+
     <div class="card">
       <p>
         This page provides the full text of the <strong>Apache License, Version 2.0</strong> for statutory compliance.
@@ -121,8 +157,6 @@
       </p>
 
       <div class="notice">
-        <h2>Full License Text</h2>
-
         <pre class="license-text">Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/

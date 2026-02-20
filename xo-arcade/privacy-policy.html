@@ -99,6 +99,35 @@
       font-size: .9rem;
       color: var(--muted);
     }
+
+    /* Navigation Bar */
+    .site-nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      justify-content:center;
+      margin-bottom:26px;
+    }
+    .site-nav a{
+      display:inline-block;
+      padding:8px 18px;
+      font-size:.82rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+      text-decoration:none;
+      border-radius:8px;
+      border:1px solid var(--border);
+      color:var(--muted);
+      background:var(--surface, #f9fafb);
+      transition:background .2s,color .2s,border-color .2s;
+    }
+    .site-nav a:hover{
+      background:var(--highlight, #eff6ff);
+      color:var(--primary, #0f172a);
+      border-color:var(--primary, #0f172a);
+      text-decoration:none;
+    }
   </style>
 </head>
 
@@ -109,6 +138,12 @@
       <div class="meta">XO Arcade: Infinity Edition | AFK GAMES STUDIO</div>
     </div>
 
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../index.html">Homepage</a>
+      <a href="terms-of-use.html">Terms of Service</a>
+      <a href="third-party-notices.html">Third-Party Notices</a>
+    </nav>
+
     <div class="card">
       <p>
         This page provides the <strong>Privacy Policy</strong> for <strong>XO Arcade: Infinity Edition</strong>,
@@ -116,11 +151,14 @@
       </p>
 
       <div class="notice">
-        <h2>Privacy Policy</h2>
+        <h2>Privacy Policy (Full Text)</h2>
 
         <pre class="legal-text">PRIVACY POLICY — XO ARCADE: INFINITY EDITION
 Effective Date: February 19, 2026
 Last Updated: February 19, 2026
+
+Most current version (web):
+https://afkgamesstudio.github.io/xo-arcade/privacy-policy.html
 
 This Privacy Policy is provided in-app and may also be available on the Studio website. If a web copy differs from the in-app copy included with your installed build, the in-app copy controls for that build.
 
@@ -249,14 +287,9 @@ If you have a privacy or deletion request that applies to Studio-controlled proc
 
 13. CONTACT
 AFK GAMES STUDIO
-Email: afkgames.helpdesk@gmail.com</pre>
+Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5130373a36303c34227f39343d213534223a11363c30383d7f323e3c">[email&#160;protected]</a></pre>
       </div>
 
       <footer>
         <div><strong>AFK GAMES STUDIO</strong></div>
-        <div>Contact: <a href="mailto:afkgames.helpdesk@gmail.com">afkgames.helpdesk@gmail.com</a></div>
-      </footer>
-    </div>
-  </div>
-</body>
-</html>
+        <div>Contact: <a h

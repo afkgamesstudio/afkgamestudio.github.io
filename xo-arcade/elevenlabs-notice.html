@@ -6,10 +6,10 @@
   <title>ElevenLabs Notice - XO Arcade: Infinity Edition | AFK GAMES STUDIO</title>
   <style>
     :root{
-      --primary:#0f172a;   /* Navy/Slate */
+      --primary:#0f172a;
       --text:#111827;
       --muted:#4b5563;
-      --bg:#ffffff;        /* White background for legibility */
+      --bg:#ffffff;
       --surface:#f9fafb;
       --border:#e5e7eb;
       --highlight:#eff6ff;
@@ -66,8 +66,6 @@
       font-weight: 800;
     }
     p{ margin: 0 0 14px; color: var(--muted); }
-    ul{ margin: 0 0 14px; padding-left: 18px; color: var(--muted); }
-    li{ margin: 6px 0; }
     .notice{
       border: 2px solid var(--primary);
       background: var(--highlight);
@@ -85,6 +83,34 @@
       font-size: .9rem;
       color: var(--muted);
     }
+    /* Navigation Bar */
+    .site-nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      justify-content:center;
+      margin-bottom:26px;
+    }
+    .site-nav a{
+      display:inline-block;
+      padding:8px 18px;
+      font-size:.82rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+      text-decoration:none;
+      border-radius:8px;
+      border:1px solid var(--border);
+      color:var(--muted);
+      background:var(--surface, #f9fafb);
+      transition:background .2s,color .2s,border-color .2s;
+    }
+    .site-nav a:hover{
+      background:var(--highlight, #eff6ff);
+      color:var(--primary, #0f172a);
+      border-color:var(--primary, #0f172a);
+      text-decoration:none;
+    }
   </style>
 </head>
 <body>
@@ -93,6 +119,13 @@
       <h1>ElevenLabs Notice</h1>
       <div class="meta">XO Arcade: Infinity Edition | AFK GAMES STUDIO</div>
     </div>
+
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../index.html">Homepage</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-use.html">Terms of Service</a>
+      <a href="third-party-notices.html">Third-Party Notices</a>
+    </nav>
 
     <div class="card">
       <p>
